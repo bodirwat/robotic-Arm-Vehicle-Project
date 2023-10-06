@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/disconnectB"
+        android:layout_width="133dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="164dp"
+        android:text="@string/disconnect"
+        app:layout_constraintBottom_toTopOf="@+id/leftD"
+        app:layout_constraintEnd_toStartOf="@+id/showReport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/servoA"
+        android:layout_width="95dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/servo1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/servoB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leftD" />
+
+    <Button
+        android:id="@+id/servoB"
+        android:layout_width="100dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/servo2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/servoC"
+        app:layout_constraintStart_toEndOf="@+id/servoA"
+        app:layout_constraintTop_toBottomOf="@+id/downD" />
+
+    <Button
+        android:id="@+id/servoC"
+        android:layout_width="99dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/servo3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/drive"
+        app:layout_constraintStart_toEndOf="@+id/servoB"
+        app:layout_constraintTop_toBottomOf="@+id/rightD" />
+
+    <Button
+        android:id="@+id/drive"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="11dp"
+        android:background="#FAC11313"
+        android:backgroundTint="@color/black"
+        android:text="@string/drive"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/servoC"
+        app:layout_constraintTop_toBottomOf="@+id/rightD"
+        app:layout_constraintVertical_bias="0.991"
+        app:strokeColor="#CF1010" />
+
+    <Button
+        android:id="@+id/upD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="3dp"
+        android:background="#00FF0000"
+        android:foreground="@drawable/up_arrow"
+        android:text="@string/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/leftD"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="m" />
+
+    <Button
+        android:id="@+id/leftD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="293dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#0DFFFFFF"
+        android:foreground="@drawable/left_arrow"
+        android:text="@string/left"
+        app:layout_constraintBottom_toTopOf="@+id/servoA"
+        app:layout_constraintEnd_toStartOf="@+id/upD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disconnectB" />
+
+    <Button
+        android:id="@+id/rightD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="229dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="286dp"
+        android:background="#00FFFFFF"
+        android:foreground="@drawable/right_arrow"
+        android:text="@string/right"
+        app:layout_constraintBottom_toTopOf="@+id/servoC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnStop"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/downD"
+        android:layout_width="131dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="161dp"
+        android:background="#00FFFFFF"
+        android:foreground="@drawable/down_arrow"
+        android:text="@string/down"
+        app:layout_constraintBottom_toTopOf="@+id/servoB"
+        app:layout_constraintEnd_toEndOf="@+id/drive"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/leftD"
+        app:layout_constraintTop_toBottomOf="@+id/btnStop" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="131dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="4dp"
+        android:background="#00CFBDCC"
+        android:foreground="@drawable/stop"
+        android:text="@string/stop"
+        app:layout_constraintBottom_toTopOf="@+id/downD"
+        app:layout_constraintEnd_toStartOf="@+id/rightD"
+        app:layout_constraintStart_toEndOf="@+id/leftD"
+        app:layout_constraintTop_toBottomOf="@+id/upD" />
+
+    <Button
+        android:id="@+id/showReport"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="157dp"
+        android:text="@string/report"
+        app:layout_constraintBottom_toTopOf="@+id/rightD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/disconnectB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
